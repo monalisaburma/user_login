@@ -1,0 +1,6 @@
+[build]
+  command = "python app.py"  # Adjust the command to match your app's entry point
+  functions = "netlify/functions"
+
+[dev]
+  functions = "netlify/functions"
