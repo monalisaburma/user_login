@@ -2,10 +2,6 @@
   command = "python app.py"
   functions = "netlify/functions"
 
-[build.environment]
-  MYSQLCLIENT_CFLAGS = "-I/usr/include/mysql"
-  MYSQLCLIENT_LDFLAGS = "-L/usr/lib/x86_64-linux-gnu -lmysqlclient"
-
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/app/:splat"
@@ -16,6 +12,5 @@
   functions = "netlify/functions"
 
 [build.packages]
-  # Install development packages for MySQL
   - mysql-client
   - libmysqlclient-dev
