@@ -14,3 +14,8 @@
 
 [dev]
   functions = "netlify/functions"
+
+[build.packages]
+  # Install development packages for MySQL
+  - mysql-client
+  - libmysqlclient-dev
