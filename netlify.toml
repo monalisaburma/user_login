@@ -1,6 +1,16 @@
 [build]
-  command = "python app.py"  # Adjust the command to match your app's entry point
+  command = "python app.py"
   functions = "netlify/functions"
+
+[build.environment]
+  MYSQLCLIENT_CFLAGS = "-I/usr/include/mysql"
+  MYSQLCLIENT_LDFLAGS = "-L/usr/lib/x86_64-linux-gnu -lmysqlclient"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/app/:splat"
+  status = 200
+  force = true
 
 [dev]
   functions = "netlify/functions"
