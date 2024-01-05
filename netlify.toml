@@ -1,3 +1,3 @@
 [build]
-command = "python app.py"
+command = "pip install mysqlclient && python app.py"
 publish = "_site"
