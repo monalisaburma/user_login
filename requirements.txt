@@ -1,5 +1,5 @@
 Flask==2.0.1
-Flask-MySQLdb==0.2.0
+Flask-MySQL==1.5.3
 httpagentparser==1.9.5
 Jinja2==3.1.2
 Werkzeug==3.0.1
