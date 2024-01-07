@@ -1,3 +1,7 @@
 [build]
-command = "sudo yum install mysql-devel && pip install -r requirements.txt && python app.py"
-publish = "_site"
+  command = "bash ./deploy.sh"
+  publish = "public"
+
+[build.environment]
+  MYSQLCLIENT_CFLAGS = "\"$(mysql_config --cflags)\""
+  MYSQLCLIENT_LDFLAGS = "\"$(mysql_config --libs)\""
