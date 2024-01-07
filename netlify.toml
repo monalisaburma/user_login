@@ -1,6 +1,6 @@
 [build]
   command = "bash ./deploy.sh"
-  publish = "public"
+  publish = "_site"
 
 [build.environment]
   MYSQLCLIENT_CFLAGS = "\"$(mysql_config --cflags)\""
