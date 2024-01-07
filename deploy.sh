@@ -2,7 +2,7 @@
 
 # Install MySQL development headers and libraries
 apt-get update
-apt-get install -y libmysqlclient-dev
+apt-get install -y python3-dev default-libmysqlclient-dev build-essential
 echo "Installation Starting........."
 # Install Python dependencies, including mysqlclient
 pip3 install --upgrade pip
