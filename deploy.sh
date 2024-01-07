@@ -6,6 +6,7 @@ apt-get install -y libmysqlclient-dev
 echo "Installation Starting........."
 # Install Python dependencies, including mysqlclient
 pip3 install --upgrade pip
+pip3 install git+https://github.com/PyMySQL/mysqlclient-python
 pip3 install -r requirements.txt  # or however you manage your dependencies
 python app.py
 
