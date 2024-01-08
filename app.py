@@ -93,4 +93,4 @@ def get_browser_from_user_agent(user_agent):
         return 'Unknown'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
