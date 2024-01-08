@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install MySQL development headers and libraries
-apt-get update
+# apt-get update
 # apt-get install -y python3-dev default-libmysqlclient-dev build-essential
 echo "Installation Starting........."
 #sudo apt-get update && apt-get upgrade python-pip
@@ -14,6 +14,8 @@ echo "Installation Starting........."
 # pip3 install git+https://github.com/PyMySQL/mysqlclient-python
 pip3 install -r requirements.txt  # or however you manage your dependencies
 python app.py
+printenv
+
 
 # Add any other deployment steps here
 # ...
