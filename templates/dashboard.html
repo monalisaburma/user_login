@@ -1,8 +1,9 @@
+<!-- templates/dashboard.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 </head>
@@ -13,17 +14,17 @@
     <ul>
         {% for entry in login_history %}
             <li>
-                <strong>{{ entry[6] }}</strong> {# Assuming the 7th element is login_time #}
+                <strong>{{ entry.login_time }}</strong>
                 <br>
-                <strong>IP Address:</strong> {{ entry[5] }}
+                <strong>IP Address:</strong> {{ entry.ip_address }}
                 <br>
-                <strong>Browser:</strong> {{ entry[4] }}
+                <strong>Browser:</strong> {{ entry.browser }}
                 <br>
-                <strong>OS:</strong> {{ entry[3] }}
+                <strong>OS:</strong> {{ entry.os }}
                 <br>
-                <strong>Device:</strong> {{ entry[2] }}
+                <strong>Device:</strong> {{ entry.device }}
                 <br>
-                <strong>Is Mobile:</strong> {{ entry[7] }}
+                <strong>Is Mobile:</strong> {{ entry.is_mobile }}
             </li>
             <br>
         {% endfor %}
