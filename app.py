@@ -26,7 +26,7 @@ with app.app_context():
 
 @app.route("/")
 def home():
-    return render_template('login.html')
+    return render_template('index.html')
 
 @app.route("/.netlify/functions/app", methods=["GET"])
 def hello():
