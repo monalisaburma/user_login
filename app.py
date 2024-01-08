@@ -32,7 +32,7 @@ def home():
 def hello():
     return jsonify({"message": "Hello from Netlify Function!"})
 
-@app.route('/login', methods=['POST'])
+@app.route('/', methods=['POST'])
 def process_login():
     username = request.form['username']
     user_agent = request.user_agent.string
