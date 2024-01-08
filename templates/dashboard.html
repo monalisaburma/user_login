@@ -9,27 +9,29 @@
 </head>
 <body>
     <h1>Welcome, {{ username }}!</h1>
-
-    <a href="/dashboard">Dashboard</a>
-
-    <h2>Login History:</h2>
-    <ul>
-        {% for entry in login_history %}
-            <li>
-                <strong>{{ entry.login_time }}</strong>
+    
+    {% if login_history %}
+        <h2>Login History:</h2>
+        <ul>
+            {% for entry in login_history %}
+                <li>
+                    <strong>{{ entry.login_time }}</strong>
+                    <br>
+                    <strong>IP Address:</strong> {{ entry.ip_address }}
+                    <br>
+                    <strong>Browser:</strong> {{ entry.browser }}
+                    <br>
+                    <strong>OS:</strong> {{ entry.os }}
+                    <br>
+                    <strong>Device:</strong> {{ entry.device }}
+                    <br>
+                    <strong>Is Mobile:</strong> {{ entry.is_mobile }}
+                </li>
                 <br>
-                <strong>IP Address:</strong> {{ entry.ip_address }}
-                <br>
-                <strong>Browser:</strong> {{ entry.browser }}
-                <br>
-                <strong>OS:</strong> {{ entry.os }}
-                <br>
-                <strong>Device:</strong> {{ entry.device }}
-                <br>
-                <strong>Is Mobile:</strong> {{ entry.is_mobile }}
-            </li>
-            <br>
-        {% endfor %}
-    </ul>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No login history available.</p>
+    {% endif %}
 </body>
 </html>
