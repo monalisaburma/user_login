@@ -1,6 +1,5 @@
 [build]
   command = "bash ./deploy.sh"
-  environment = { DATABASE_URL = "mysql+pymysql://root:876543@127.0.0.1:3306/user_login_info?charset=utf8mb4" }
   publish = "templates"
    
 
