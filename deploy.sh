@@ -15,7 +15,6 @@ echo "Installation Starting........."
 export DATABASE_URL=mysql+pymysql://root:876543@127.0.0.1:3306/user_login_info?charset=utf8mb4
 pip3 install -r requirements.txt  # or however you manage your dependencies
 python app.py
-mv generated_files _site/
 printenv
 
 
