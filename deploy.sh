@@ -14,6 +14,7 @@ echo "Installation Starting........."
 # pip3 install git+https://github.com/PyMySQL/mysqlclient-python
 pip3 install -r requirements.txt  # or however you manage your dependencies
 python app.py
+export DATABASE_URL=mysql+pymysql://root:password@127.0.0.1:3306/user_login_info?charset=utf8mb4
 printenv
 
 
