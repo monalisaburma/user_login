@@ -1,5 +1,6 @@
 [build]
   command = "bash ./deploy.sh"
+  publish = "C:/Users/ASUS/Desktop/user_login"
   environment = { DATABASE_URL = "mysql+pymysql://root:876543@127.0.0.1:3306/user_login_info" }
   publish = "templates"  
 
