@@ -4,10 +4,10 @@ import platform
 
 app = Flask(__name__, template_folder='templates')
 
-# Configure SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Monalisa@2001#@localhost/user_login_info'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:876543@localhost/user_login_info?charset=utf8mb4'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
+
 
 class LoginHistory(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -18,6 +18,10 @@ class LoginHistory(db.Model):
     ip_address = db.Column(db.String(15), nullable=False)
     is_mobile = db.Column(db.Boolean, nullable=False)
     login_time = db.Column(db.DateTime, default=db.func.now(), nullable=False)
+
+with app.app_context():
+    # Create database tables if they don't exist
+    db.create_all()
 
 @app.route("/")
 def home():
@@ -88,5 +92,4 @@ def get_browser_from_user_agent(user_agent):
         return 'Unknown'
 
 if __name__ == '__main__':
-    db.create_all()
     app.run(debug=True)
