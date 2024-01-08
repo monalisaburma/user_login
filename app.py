@@ -5,7 +5,7 @@ import platform
 app = Flask(__name__, template_folder='templates')
 
 # Configure SQLAlchemy
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Monalisa@2001#@127.0.0.1/user_login_info'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Monalisa@2001#@localhost/user_login_info'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
