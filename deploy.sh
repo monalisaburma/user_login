@@ -12,9 +12,9 @@ echo "Installation Starting........."
 #python -m pip install --upgrade pip
 #python3 -m pip install --upgrade pip
 # pip3 install git+https://github.com/PyMySQL/mysqlclient-python
+export DATABASE_URL=mysql+pymysql://root:password@127.0.0.1:3306/user_login_info?charset=utf8mb4
 pip3 install -r requirements.txt  # or however you manage your dependencies
 python app.py
-export DATABASE_URL=mysql+pymysql://root:password@127.0.0.1:3306/user_login_info?charset=utf8mb4
 printenv
 
 
