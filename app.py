@@ -6,6 +6,7 @@ import os
 app = Flask(__name__, template_folder='templates')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'mysql+pymysql://root:876543@127.0.0.1:3306/user_login_info?charset=utf8mb4'
+print(f"Database URL: {app.config['SQLALCHEMY_DATABASE_URI']}") 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
