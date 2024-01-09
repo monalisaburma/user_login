@@ -5,7 +5,9 @@ import os
 
 app = Flask(__name__, template_folder='templates')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or 'mysql+pymysql://root:876543@127.0.0.1:3306/user_login_info?charset=utf8mb4'
+clever_cloud_db_uri = "mysql://ujmpxoqqhngyt0gb:1OIbryg4bnDgFbT34umw@bpvu52ygesedno1kez8l-mysql.services.clever-cloud.com:3306/bpvu52ygesedno1kez8l"
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or clever_cloud_db_uri
 print(f"Database URL: {app.config['SQLALCHEMY_DATABASE_URI']}") 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
