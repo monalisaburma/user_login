@@ -1,1 +1,1 @@
-web: waitress-serve --call app:app
+web: waitress-serve --listen=*:PORT --call app:app
