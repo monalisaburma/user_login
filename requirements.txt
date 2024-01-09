@@ -3,5 +3,4 @@ Flask-SQLAlchemy==2.5
 SQLAlchemy==1.4.5
 httpagentparser==1.9.5
 Werkzeug==2.0.1
-pymysql==1.0.2
 
