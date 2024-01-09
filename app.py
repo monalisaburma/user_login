@@ -98,5 +98,5 @@ def get_browser_from_user_agent(user_agent):
 if __name__ == '__main__':
     # Use waitress as the WSGI server for development
     from waitress import serve
-    serve(app, host="0.0.0.0", port=5001)
+    serve(app, host="0.0.0.0", port=5000)
 
