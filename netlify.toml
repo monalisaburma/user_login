@@ -2,10 +2,6 @@
   command = "bash ./deploy.sh"
   publish = "templates"
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
 
    
 
