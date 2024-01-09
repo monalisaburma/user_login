@@ -5,10 +5,10 @@ import os
 
 app = Flask(__name__, template_folder='templates')
 
-clever_cloud_db_uri = "mysql+pymysql://ujmpxoqqhngyt0gb:1OIbryg4bnDgFbT34umw@bpvu52ygesedno1kez8l-mysql.services.clever-cloud.com:3306/bpvu52ygesedno1kez8l"
+# Replace this with your Clever Cloud MySQL database connection URI
+clever_cloud_db_uri = "mysql://ujmpxoqqhngyt0gb:1OIbryg4bnDgFbT34umw@bpvu52ygesedno1kez8l-mysql.services.clever-cloud.com:3306/bpvu52ygesedno1kez8l"
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL') or clever_cloud_db_uri
-print(f"Database URL: {app.config['SQLALCHEMY_DATABASE_URI']}") 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -96,5 +96,7 @@ def get_browser_from_user_agent(user_agent):
         return 'Unknown'
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0')
+    # Use waitress as the WSGI server for development
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=5001)
 
