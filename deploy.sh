@@ -12,6 +12,9 @@ echo "Installation Starting........."
 #python -m pip install --upgrade pip
 #python3 -m pip install --upgrade pip
 # pip3 install git+https://github.com/PyMySQL/mysqlclient-python
+
+echo "gunicorn==20.1.0" >> requirements.txt
+
 export DATABASE_URL=mysql+pymysql://ujmpxoqqhngyt0gb:1OIbryg4bnDgFbT34umw@bpvu52ygesedno1kez8l-mysql.services.clever-cloud.com:3306/bpvu52ygesedno1kez8l
 pip3 install -r requirements.txt  # or however you manage your dependencies
 python app.py
