@@ -2,7 +2,7 @@ echo "Installation Starting........."
 
 # Set environment variables
 export DATABASE_URL=mysql+pymysql://ujmpxoqqhngyt0gb:1OIbryg4bnDgFbT34umw@bpvu52ygesedno1kez8l-mysql.services.clever-cloud.com:3306/bpvu52ygesedno1kez8l
-export PORT=5000  # Or the port number you want to use
+export PORT=5001  # Or the port number you want to use
 
 # Install Python dependencies
 pip3 install -r requirements.txt
@@ -11,4 +11,4 @@ pip3 install -r requirements.txt
 pip3 install waitress
 
 # Start the Flask app using Waitress
-waitress-serve --listen=*:$PORT --call app:app
+waitress-serve --host=0.0.0.0 --port=$PORT app:app
