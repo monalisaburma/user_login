@@ -12,6 +12,7 @@ echo "Installation Starting........."
 #python -m pip install --upgrade pip
 #python3 -m pip install --upgrade pip
 # pip3 install git+https://github.com/PyMySQL/mysqlclient-python
+pip3 install gunicorn==20.1.0
 
 echo "gunicorn==20.1.0" >> requirements.txt
 
